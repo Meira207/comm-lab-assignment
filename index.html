@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Untold</title>
+    <!-- linking my css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- top bar - different color so it stands out from the page -->
+<header>
+    <h1>THE <span>UNTOLD</span></h1>
+
+    <nav>
+        <!-- these buttons switch the sections using js -->
+        <a href="#" id="homeLink" class="active">Home</a>
+        <a href="#" id="filmLink">The Film</a>
+        <a href="#" id="exploreLink">Explore</a>
+    </nav>
+</header>
+
+<!-- ========== HOME SECTION ========== -->
+<section id="homeSection" class="page-section">
+
+    <!-- big picture background at the top -->
+    <div class="hero">
+        <div class="hero-content">
+            <p class="tagline">You Found The Untold Essentials</p>
+            <h2>The most unspoken essentials of life.</h2>
+            <button type="button" id="goToFilmBtn" class="btn">Watch the Film</button>
+        </div>
+    </div>
+
+    <main>
+        <p class="intro">
+            Do these questions interest you, don't move.
+        </p>
+
+        <!-- click a question and it lights up -->
+        <ul class="question-list" id="questionList">
+            <li class="q-item">Ever thought about the dead?</li>
+            <li class="q-item">Wondered how to interact with the dead?</li>
+            <li class="q-item">Thought about what to do about the dead?</li>
+            <li class="q-item">Or maybe, what NOT to do with the dead?</li>
+        </ul>
+        <p id="qNote" class="soft-note"></p>
+
+        <h3>Things Not To Do With A Dead Body</h3>
+        <p>Is the right and perfect film for you.</p>
+
+        <p>
+            Before watching our film, let's set the stage with these videos
+            to learn more about the dead and how to interact with them.
+        </p>
+
+        <!-- outside youtube links for warm up -->
+        <div class="link-box">
+            <a href="https://www.youtube.com/watch?v=2PQbcMe_G6k" target="_blank">
+                How To Connect To Deceased Loved Ones
+            </a>
+            <br><br>
+            <a href="https://www.youtube.com/watch?v=oaFg1o4rrhU" target="_blank">
+                What To Do With The Dead
+            </a>
+        </div>
+
+        <p>The following books might work as well, if you're more of a reader.</p>
+
+        <!-- 3 book pictures in a row -->
+        <div class="row">
+            <div class="column">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" alt="book 1" class="book-img">
+            </div>
+            <div class="column">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400" alt="book 2" class="book-img">
+            </div>
+            <div class="column">
+                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400" alt="book 3" class="book-img">
+            </div>
+        </div>
+
+        <h3>What are you waiting for?</h3>
+        <p>
+            Watch the film, explore more and enter
+            the world of <b>The Untold.</b>
+        </p>
+    </main>
+</section>
+
+<!-- ========== FILM SECTION ========== -->
+<section id="filmSection" class="page-section hide">
+    <main>
+        <h2 class="page-title">Things Not To Do With A Dead Body</h2>
+
+        <p class="intro">
+            A short film about the dead and how to interact with them.
+            A humorous take on an unexpected situation.
+        </p>
+
+        <h3>Why Watch?</h3>
+        <p>
+            What happens when you find yourself dealing with
+            something you never expected?
+        </p>
+        <p>
+            <i>Things Not To Do With A Dead Body</i> is a
+            humorous short film that takes an unusual look
+            at what can happen when a dead body becomes
+            part of an unexpected situation.
+        </p>
+
+        <h3>Watch The Film</h3>
+        <p class="soft-note">Plays right here on the site (no need to open YouTube).</p>
+
+        <!-- normal html video player so it stays on our page -->
+        <div class="video-box">
+            <video id="filmPlayer" controls playsinline poster="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200">
+                <source src="film.mp4" type="video/mp4">
+                Sorry, your browser cannot play this video.
+            </video>
+        </div>
+
+        <!-- little custom controls under the player for extra interactivity -->
+        <div class="extra-controls">
+            <button type="button" id="playPauseBtn">Play / Pause</button>
+            <button type="button" id="rewindBtn">Rewind 10s</button>
+            <button type="button" id="muteBtn">Mute</button>
+        </div>
+
+        <h3>Quick rules (click them)</h3>
+        <p>I made these little buttons for fun. Click one to see a note.</p>
+
+        <div class="dont-list">
+            <button type="button" class="dont-item" data-text="Maybe don't announce it on social media first...">
+                Rule 1 - Don't panic-post about it
+            </button>
+            <button type="button" class="dont-item" data-text="Treat the situation carefully. This is not a comedy prop... or is it?">
+                Rule 2 - Don't treat it like a prop
+            </button>
+            <button type="button" class="dont-item" data-text="Some questions are better left for after the credits.">
+                Rule 3 - Don't ask too many questions
+            </button>
+            <button type="button" class="dont-item" data-text="Seriously just watch the film lol">
+                Rule 4 - Don't skip the film
+            </button>
+        </div>
+
+        <!-- this empty p will show the note from js -->
+        <p id="revealBox" class="reveal-box"></p>
+
+        <p>
+            <button type="button" id="thinkBtn">What do you think?</button>
+        </p>
+        <p id="thinkMessage" class="think-message"></p>
+    </main>
+</section>
+
+<!-- ========== EXPLORE SECTION ========== -->
+<section id="exploreSection" class="page-section hide">
+    <main>
+        <h2 class="page-title">Something Else To Watch?</h2>
+
+        <p class="intro">
+            You enjoyed our film?<br>
+            Here are three more stories you might enjoy.
+        </p>
+
+        <!-- click a card to expand a little more text -->
+        <section class="card" data-extra="Whodunit vibes, sharp jokes, and a detective who sees everything.">
+            <h3>01 - Knives Out</h3>
+            <p>
+                A murder mystery where a detective investigates
+                the death of a wealthy author.
+            </p>
+            <p class="card-extra"></p>
+        </section>
+
+        <section class="card" data-extra="Board game energy. Everyone is suspicious. Bring snacks.">
+            <h3>02 - Clue</h3>
+            <p>
+                A mystery comedy involving suspicious characters,
+                secrets and a murder.
+            </p>
+            <p class="card-extra"></p>
+        </section>
+
+        <section class="card" data-extra="Classic Christie. People disappear one by one. Tense.">
+            <h3>03 - And Then There Were None</h3>
+            <p>
+                Agatha Christie's famous mystery about strangers
+                who are brought together and face a series of deaths.
+            </p>
+            <p class="card-extra"></p>
+        </section>
+
+        <h3>Enjoyed? Don't forget to share!</h3>
+        <p>
+            <button type="button" id="shareBtn">Show share text</button>
+        </p>
+        <p id="shareNote" class="think-message"></p>
+    </main>
+</section>
+
+<footer>
+    <p>THE UNTOLD - Things Not To Do With A Dead Body</p>
+</footer>
+
+<!-- linking my javascript at the bottom so the page loads first -->
+<script src="script.js"></script>
+
+</body>
+</html>
