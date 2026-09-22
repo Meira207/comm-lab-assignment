@@ -1,10 +1,8 @@
-/* basic reset stuff */
 * {
     box-sizing: border-box;
 }
 
 body {
-    /* page itself is deep black */
     background-color: #050505;
     color: white;
     font-family: Arial, sans-serif;
@@ -12,13 +10,10 @@ body {
     font-size: 16px;
 }
 
-/* hide a whole section when we switch pages */
+/*  to hide section when we switch pages */
 .hide {
     display: none;
 }
-
-/* ----- top header (made different on purpose) ----- */
-/* not pure black like the page, so you can tell its the menu bar */
 
 header {
     background-color: #1c1c1c;
@@ -40,7 +35,6 @@ header h1 {
     letter-spacing: 2px;
 }
 
-/* making UNTOLD red like my first draft */
 header h1 span {
     color: #e00000;
 }
@@ -50,7 +44,6 @@ nav {
     gap: 12px;
 }
 
-/* tab look so links feel clickable */
 nav a {
     color: white;
     text-decoration: none;
@@ -101,7 +94,6 @@ nav a.active {
     margin: 15px 0 25px;
 }
 
-/* ----- main text area ----- */
 
 main {
     width: 80%;
@@ -136,8 +128,6 @@ p {
     min-height: 24px;
 }
 
-/* the questions list on home */
-
 .question-list {
     background-color: #111;
     border-left: 4px solid #e00000;
@@ -168,8 +158,6 @@ li::marker {
     color: #e00000;
 }
 
-/* links inside the page */
-
 main a {
     color: #e00000;
     font-size: 18px;
@@ -183,7 +171,6 @@ main a:hover {
     margin: 20px 0;
 }
 
-/* red button look */
 
 .btn {
     background-color: #e00000;
@@ -215,7 +202,7 @@ button:hover {
     color: #e00000;
 }
 
-/* books in 3 columns */
+/* books */
 
 .row {
     display: flex;
@@ -241,7 +228,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* ----- video plays on the website ----- */
 
 .video-box {
     margin: 25px 0;
@@ -277,7 +263,6 @@ button:hover {
     color: white;
 }
 
-/* explore cards */
 
 .card {
     background-color: #111;
@@ -307,8 +292,6 @@ button:hover {
     font-size: 16px;
     margin: 8px 0 0;
 }
-
-/* the clickable rules under the film */
 
 .dont-list {
     max-width: 520px;
@@ -344,7 +327,6 @@ button:hover {
     font-weight: bold;
 }
 
-/* footer */
 
 footer {
     background-color: #1c1c1c;
@@ -355,7 +337,7 @@ footer {
     border-top: 3px solid #e00000;
 }
 
-/* phone screen fixes */
+/* phone screen  */
 
 @media (max-width: 700px) {
     header {
