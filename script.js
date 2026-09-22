@@ -1,17 +1,14 @@
-// my javascript for The Untold website
-// page switching + a few click interactions
 
-// grab the 3 big sections
+// for thesections
 var homeSection = document.getElementById("homeSection");
 var filmSection = document.getElementById("filmSection");
 var exploreSection = document.getElementById("exploreSection");
 
-// nav links
+// links
 var homeLink = document.getElementById("homeLink");
 var filmLink = document.getElementById("filmLink");
 var exploreLink = document.getElementById("exploreLink");
 
-// this function hides all sections then shows the one i want
 function showSection(sectionName) {
     homeSection.classList.add("hide");
     filmSection.classList.add("hide");
@@ -21,7 +18,6 @@ function showSection(sectionName) {
     filmLink.classList.remove("active");
     exploreLink.classList.remove("active");
 
-    // pause the film if we leave that page
     var vid = document.getElementById("filmPlayer");
     if (vid && sectionName !== "film") {
         vid.pause();
@@ -42,7 +38,6 @@ function showSection(sectionName) {
         exploreLink.classList.add("active");
     }
 
-    // scroll back up so it feels like a new page
     window.scrollTo(0, 0);
 }
 
@@ -62,7 +57,7 @@ exploreLink.onclick = function (e) {
     showSection("explore");
 };
 
-// the big button on the home hero also goes to the film
+// the button on home to go to the film
 var goToFilmBtn = document.getElementById("goToFilmBtn");
 if (goToFilmBtn) {
     goToFilmBtn.onclick = function () {
@@ -70,7 +65,7 @@ if (goToFilmBtn) {
     };
 }
 
-// ----- home questions light up when clicked -----
+// home questions 
 var questions = document.querySelectorAll(".q-item");
 var qNote = document.getElementById("qNote");
 var qReplies = [
@@ -98,7 +93,7 @@ for (var q = 0; q < questions.length; q++) {
     };
 }
 
-// ----- video controls (plays on our site) -----
+// for video to play on site
 var filmPlayer = document.getElementById("filmPlayer");
 var playPauseBtn = document.getElementById("playPauseBtn");
 var rewindBtn = document.getElementById("rewindBtn");
@@ -134,7 +129,6 @@ if (muteBtn && filmPlayer) {
     };
 }
 
-// ----- clickable rules under the video -----
 var rules = document.querySelectorAll(".dont-item");
 var revealBox = document.getElementById("revealBox");
 
@@ -148,7 +142,7 @@ for (var i = 0; i < rules.length; i++) {
     };
 }
 
-// ----- what do you think button -----
+// what do you think 
 var thinkBtn = document.getElementById("thinkBtn");
 var thinkMessage = document.getElementById("thinkMessage");
 
@@ -166,7 +160,7 @@ if (thinkBtn) {
     };
 }
 
-// ----- explore cards expand when clicked -----
+// explore cards expand
 var cards = document.querySelectorAll(".card");
 
 for (var c = 0; c < cards.length; c++) {
@@ -188,7 +182,7 @@ for (var c = 0; c < cards.length; c++) {
     };
 }
 
-// ----- share text on explore -----
+// share text on explore 
 var shareBtn = document.getElementById("shareBtn");
 var shareNote = document.getElementById("shareNote");
 
