@@ -2,28 +2,27 @@
 <html>
 <head>
     <title>The Untold</title>
-    <!-- linking my css file -->
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- top bar - different color so it stands out from the page -->
 <header>
     <h1>THE <span>UNTOLD</span></h1>
 
     <nav>
-        <!-- these buttons switch the sections using js -->
+        <!-- To switch the sections using js -->
         <a href="#" id="homeLink" class="active">Home</a>
         <a href="#" id="filmLink">The Film</a>
         <a href="#" id="exploreLink">Explore</a>
     </nav>
 </header>
 
-<!-- ========== HOME SECTION ========== -->
+<!--HOME SECTION-->
 <section id="homeSection" class="page-section">
 
-    <!-- big picture background at the top -->
+    <!--background pic -->
     <div class="hero">
         <div class="hero-content">
             <p class="tagline">You Found The Untold Essentials</p>
@@ -53,8 +52,7 @@
             Before watching our film, let's set the stage with these videos
             to learn more about the dead and how to interact with them.
         </p>
-
-        <!-- outside youtube links for warm up -->
+<!-- Yt vids-->
         <div class="link-box">
             <a href="https://www.youtube.com/watch?v=2PQbcMe_G6k" target="_blank">
                 How To Connect To Deceased Loved Ones
@@ -67,7 +65,7 @@
 
         <p>The following books might work as well, if you're more of a reader.</p>
 
-        <!-- 3 book pictures in a row -->
+        <!-- books -->
         <div class="row">
             <div class="column">
                 <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" alt="book 1" class="book-img">
@@ -88,7 +86,7 @@
     </main>
 </section>
 
-<!-- ========== FILM SECTION ========== -->
+<!-- FILM SECTION -->
 <section id="filmSection" class="page-section hide">
     <main>
         <h2 class="page-title">Things Not To Do With A Dead Body</h2>
@@ -113,7 +111,6 @@
         <h3>Watch The Film</h3>
         <p class="soft-note">Plays right here on the site (no need to open YouTube).</p>
 
-        <!-- normal html video player so it stays on our page -->
         <div class="video-box">
             <video id="filmPlayer" controls playsinline poster="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200">
                 <source src="film.mp4" type="video/mp4">
@@ -121,7 +118,6 @@
             </video>
         </div>
 
-        <!-- little custom controls under the player for extra interactivity -->
         <div class="extra-controls">
             <button type="button" id="playPauseBtn">Play / Pause</button>
             <button type="button" id="rewindBtn">Rewind 10s</button>
@@ -146,7 +142,6 @@
             </button>
         </div>
 
-        <!-- this empty p will show the note from js -->
         <p id="revealBox" class="reveal-box"></p>
 
         <p>
@@ -156,7 +151,7 @@
     </main>
 </section>
 
-<!-- ========== EXPLORE SECTION ========== -->
+<!-- EXPLORE SECTION  -->
 <section id="exploreSection" class="page-section hide">
     <main>
         <h2 class="page-title">Something Else To Watch?</h2>
@@ -166,7 +161,7 @@
             Here are three more stories you might enjoy.
         </p>
 
-        <!-- click a card to expand a little more text -->
+        <!-- To expand card -->
         <section class="card" data-extra="Whodunit vibes, sharp jokes, and a detective who sees everything.">
             <h3>01 - Knives Out</h3>
             <p>
@@ -206,7 +201,6 @@
     <p>THE UNTOLD - Things Not To Do With A Dead Body</p>
 </footer>
 
-<!-- linking my javascript at the bottom so the page loads first -->
 <script src="script.js"></script>
 
 </body>
